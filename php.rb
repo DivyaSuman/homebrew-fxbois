@@ -74,7 +74,7 @@ class Php < Formula
             "--with-tidy=#{Formula['tidy'].opt_prefix}",
             "--with-xmlrpc",
             "--with-zlib=#{Formula['zlib'].opt_prefix}",
-
+            "--without-pear",
            ]
 
 #    system "./buildconf" if build.head?
