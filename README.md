@@ -16,4 +16,3 @@ May need
 
 ```sudo chown -R <USER>:<GROUP> /usr/local/Library/Taps```
 
-```brew tap homebrew/dupes```
