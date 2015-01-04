@@ -16,7 +16,7 @@ May need
 
 ```sudo chown -R <USER>:<GROUP> /usr/local/Library/Taps```
 
-Or
+And
 
 cd /Library/Caches/Homebrew/
 
