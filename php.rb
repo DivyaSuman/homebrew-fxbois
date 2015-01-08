@@ -52,7 +52,7 @@ class Php < Formula
             "--enable-zip",
             "--with-apxs2=/usr/sbin/apxs",
             "--with-bz2=/usr",
-#            "--with-config-file-path=#{config_path}",
+            "--with-config-file-path=/etc",
 #            "--with-config-file-scan-dir=#{config_path}/conf.d",
             "--with-curl",
             "--with-freetype-dir=#{Formula['freetype'].opt_prefix}",
