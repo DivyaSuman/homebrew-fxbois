@@ -4,10 +4,10 @@ require 'formula'
 
 class Php < Formula
 
-  url "http://php.net/get/php-5.6.6.tar.bz2/from/this/mirror"
-  sha1 "6795db456f66193634ff38cf8039636b168eda3c"
+  url "http://php.net/get/php-5.6.7.tar.bz2/from/this/mirror"
+  sha1 "36a51c7ad98a6ed210673c2e655ba501f0a2f7ed"
   homepage "http://php.net"
-  version "5.6.6"
+  version "5.6.7"
 #  revision 1
 
   # So PHP extensions don't report missing symbols
