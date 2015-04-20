@@ -5,7 +5,7 @@ require 'formula'
 class Php < Formula
 
   url "http://php.net/get/php-5.6.8.tar.bz2/from/this/mirror"
-  sha1 "363f4a0ef50ed4036d8b0366bc20a6afaa540f666"
+  sha1 "63f4a0ef50ed4036d8b0366bc20a6afaa540f666"
   homepage "http://php.net"
   version "5.6.8"
 #  revision 1
