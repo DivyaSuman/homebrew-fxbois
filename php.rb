@@ -4,10 +4,10 @@ require 'formula'
 
 class Php < Formula
 
-  url "http://php.net/get/php-5.6.7.tar.bz2/from/this/mirror"
-  sha1 "36a51c7ad98a6ed210673c2e655ba501f0a2f7ed"
+  url "http://php.net/get/php-5.6.8.tar.bz2/from/this/mirror"
+  sha1 "363f4a0ef50ed4036d8b0366bc20a6afaa540f666"
   homepage "http://php.net"
-  version "5.6.7"
+  version "5.6.8"
 #  revision 1
 
   # So PHP extensions don't report missing symbols
@@ -38,7 +38,7 @@ class Php < Formula
 #            "--enable-exif",
 #            "--enable-ftp",
             "--enable-gd-native-ttf",
-            "--enable-intl=no",
+#            "--enable-intl=no",
 #            "--enable-mbregex",
             "--enable-mbstring",
             "--enable-pcntl",
