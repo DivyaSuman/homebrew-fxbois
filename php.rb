@@ -10,7 +10,7 @@ class Php < Formula
   sha1 "a03f3a168a83a5e6fb983c44933f23fc44323a00"
   homepage "http://php.net"
   version "5.6.9"
-  revision 1
+  revision 2
 
   # So PHP extensions don't report missing symbols
   skip_clean 'bin', 'sbin'
