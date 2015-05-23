@@ -22,7 +22,7 @@ class Php < Formula
   depends_on 'libpng'
   depends_on 'libtool'
   depends_on 'mysql'
-  depends_on 'fxbois/tidy'
+  depends_on 'fxbois/fxbois/tidy'
   #depends_on 'tidy-html5'
 
   def install
