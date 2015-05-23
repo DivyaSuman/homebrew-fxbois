@@ -10,17 +10,14 @@ class Php < Formula
   sha1 "a03f3a168a83a5e6fb983c44933f23fc44323a00"
   homepage "http://php.net"
   version "5.6.9"
-  revision 3
+#  revision 1
 
   # So PHP extensions don't report missing symbols
   skip_clean 'bin', 'sbin'
   
   depends_on 'curl'
   depends_on 'freetype'
-#  depends_on 'gettext'
-#  depends_on 'homebrew/dupes/tidy'
   depends_on 'homebrew/dupes/zlib'
-#  depends_on 'icu4c'
   depends_on 'jpeg'
   depends_on 'libpng'
   depends_on 'libtool'
@@ -29,56 +26,58 @@ class Php < Formula
 
   def install
 
-    args = ["--prefix=#{prefix}",
-            "--localstatedir=#{var}",
-#            "--sysconfdir=#{config_path}",
-            "--libexecdir=#{libexec}",
-            "--mandir=#{man}",
-            "--disable-cgi",
-            "--disable-debug",
-#            "--enable-bcmath",
-            "--enable-calendar",
-#            "--enable-exif",
-#            "--enable-ftp",
-            "--enable-gd-native-ttf",
-#            "--enable-intl=no",
-#            "--enable-mbregex",
-            "--enable-mbstring",
-            "--enable-pcntl",
-#            "--enable-shmop",
-            "--enable-soap",
-            "--enable-sockets",
-#            "--enable-sysvmsg",
-#            "--enable-sysvsem",
-#            "--enable-sysvshm",
-#            "--enable-wddx",
-            "--enable-zip",
-            "--with-apxs2=/usr/sbin/apxs",
-            "--with-bz2=/usr",
-            "--with-config-file-path=/etc",
-#            "--with-config-file-scan-dir=#{config_path}/conf.d",
-            "--with-curl",
-            "--with-freetype-dir=#{Formula['freetype'].opt_prefix}",
-            "--with-gd",
-#            "--with-gettext=#{Formula['gettext'].opt_prefix}",
-#            "--with-iconv-dir=/usr",
-#            "--with-icu-dir=#{Formula['icu4c'].opt_prefix}",
-            "--with-jpeg-dir=#{Formula['jpeg'].opt_prefix}",
-#            "--with-kerberos=/usr",
-            "--with-libedit",
-#            "--with-mhash",
-            "--with-mysql-sock=/tmp/mysql.sock",
-            "--with-mysql=mysqlnd",
-            "--with-mysqli=mysqlnd",
-            "--with-openssl",
-            "--with-pdo-mysql=mysqlnd",
-            "--with-png-dir=#{Formula['libpng'].opt_prefix}",
-            "--with-readline",
-            "--with-tidy=#{Formula['tidy-html5'].opt_prefix}",
-            "--with-xmlrpc",
-            "--with-zlib=#{Formula['zlib'].opt_prefix}",
-            "--without-pear",
-           ]
+    args = [
+      "--prefix=#{prefix}",
+      "--localstatedir=#{var}",
+#     "--sysconfdir=#{config_path}",
+      "--libexecdir=#{libexec}",
+      "--mandir=#{man}",
+      "--disable-cgi",
+      "--disable-debug",
+      "--disable-opcache",
+#      "--enable-bcmath",
+      "--enable-calendar",
+#      "--enable-exif",
+#      "--enable-ftp",
+      "--enable-gd-native-ttf",
+#     "--enable-intl=no",
+#     "--enable-mbregex",
+      "--enable-mbstring",
+      "--enable-pcntl",
+#     "--enable-shmop",
+      "--enable-soap",
+      "--enable-sockets",
+#      "--enable-sysvmsg",
+#      "--enable-sysvsem",
+#      "--enable-sysvshm",
+#      "--enable-wddx",
+      "--enable-zip",
+      "--with-apxs2=/usr/sbin/apxs",
+      "--with-bz2=/usr",
+      "--with-config-file-path=/etc",
+#      "--with-config-file-scan-dir=#{config_path}/conf.d",
+      "--with-curl",
+      "--with-freetype-dir=#{Formula['freetype'].opt_prefix}",
+      "--with-gd",
+#      "--with-gettext=#{Formula['gettext'].opt_prefix}",
+#      "--with-iconv-dir=/usr",
+#      "--with-icu-dir=#{Formula['icu4c'].opt_prefix}",
+      "--with-jpeg-dir=#{Formula['jpeg'].opt_prefix}",
+#      "--with-kerberos=/usr",
+      "--with-libedit",
+#      "--with-mhash",
+      "--with-mysql-sock=/tmp/mysql.sock",
+      "--with-mysql=mysqlnd",
+      "--with-mysqli=mysqlnd",
+      "--with-openssl",
+      "--with-pdo-mysql=mysqlnd",
+      "--with-png-dir=#{Formula['libpng'].opt_prefix}",
+      "--with-readline",
+      "--with-tidy=#{Formula['tidy-html5'].opt_prefix}",
+      "--with-xmlrpc",
+      "--with-zlib=#{Formula['zlib'].opt_prefix}",
+      "--without-pear",
+    ]
 
 #    system "./buildconf" if build.head?
     system "./configure", *args
