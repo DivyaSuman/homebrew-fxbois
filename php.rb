@@ -10,7 +10,7 @@ class Php < Formula
   sha1 "126685c4b6447371d54635b36c09ab920e4f26d7"
   homepage "http://php.net"
   version "5.6.9"
-#  revision 1
+  revision 1
 
   # So PHP extensions don't report missing symbols
   skip_clean 'bin', 'sbin'
@@ -18,13 +18,14 @@ class Php < Formula
   depends_on 'curl'
   depends_on 'freetype'
 #  depends_on 'gettext'
-  depends_on 'homebrew/dupes/tidy'
+#  depends_on 'homebrew/dupes/tidy'
   depends_on 'homebrew/dupes/zlib'
 #  depends_on 'icu4c'
   depends_on 'jpeg'
   depends_on 'libpng'
   depends_on 'libtool'
   depends_on 'mysql'
+  depends_on 'tidy-html5' if build.include?('with-tidy')
 
   def install
 
@@ -73,7 +74,7 @@ class Php < Formula
             "--with-pdo-mysql=mysqlnd",
             "--with-png-dir=#{Formula['libpng'].opt_prefix}",
             "--with-readline",
-            "--with-tidy=#{Formula['tidy'].opt_prefix}",
+            "--with-tidy=#{Formula['tidy-html5'].opt_prefix}",
             "--with-xmlrpc",
             "--with-zlib=#{Formula['zlib'].opt_prefix}",
             "--without-pear",
