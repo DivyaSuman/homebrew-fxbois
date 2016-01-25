@@ -10,7 +10,7 @@ class Php < Formula
   sha1 "24f6a1f926f5eda8bd8c0a343d3b175378d706bf"
   homepage "http://php.net"
   version "7.0.2"
-  # revision 1
+  revision 1
   
   # So PHP extensions don't report missing symbols
   skip_clean 'bin', 'sbin'
@@ -20,8 +20,12 @@ class Php < Formula
   depends_on 'homebrew/dupes/zlib'
   depends_on 'jpeg'
   depends_on 'libpng'
+  depends_on 'libressl'
   depends_on 'libtool'
+  depends_on 'libxml2'
   depends_on 'mysql'
+  depends_on 'openssl'
+  depends_on 'readline'
   depends_on 'fxbois/fxbois/tidy'
   #depends_on 'tidy-html5'
 
@@ -66,6 +70,8 @@ class Php < Formula
       "--with-jpeg-dir=#{Formula['jpeg'].opt_prefix}",
       #"--with-kerberos=/usr",
       "--with-libedit",
+      "--with-openssl=" + Formula['openssl'].opt_prefix.to_s,
+      "--with-libxml-dir=#{Formula['libxml2'].opt_prefix}",
       #"--with-mhash",
       "--with-mysql-sock=/tmp/mysql.sock",
       "--with-mysql=mysqlnd",
@@ -73,7 +79,7 @@ class Php < Formula
       "--with-openssl",
       "--with-pdo-mysql=mysqlnd",
       "--with-png-dir=#{Formula['libpng'].opt_prefix}",
-      "--with-readline",
+      "--with-readline=#{Formula['readline'].opt_prefix}",
       "--with-tidy=#{Formula['tidy'].opt_prefix}",
       #"--with-tidy=#{Formula['tidy-html5'].opt_prefix}",
       "--with-xmlrpc",
