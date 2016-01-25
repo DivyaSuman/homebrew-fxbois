@@ -20,7 +20,7 @@ class Php < Formula
   #depends_on 'homebrew/dupes/zlib'
   depends_on 'jpeg'
   depends_on 'libpng'
-  depends_on 'libressl'
+  #depends_on 'libressl'
   depends_on 'libtool'
   depends_on 'libxml2'
   depends_on 'mysql'
