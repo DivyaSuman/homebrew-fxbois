@@ -4,12 +4,12 @@ require 'formula'
 
 class Php < Formula
   
-  # wget "http://fr2.php.net/get/php-5.6.X.tar.bz2/from/this/mirror" -O /Library/Caches/Homebrew/php-5.6.X
-  url "http://php.net/get/php-5.6.9.tar.bz2/from/this/mirror"
-  # openssl sha1 /Library/Caches/Homebrew/php-5.6.X
-  sha1 "a03f3a168a83a5e6fb983c44933f23fc44323a00"
+  # wget "http://fr2.php.net/get/php-7.0.X.tar.bz2/from/this/mirror" -O /Library/Caches/Homebrew/php-7.0.X
+  url "http://php.net/get/php-7.0.2.tar.bz2/from/this/mirror"
+  # openssl sha1 /Library/Caches/Homebrew/php-7.0.X
+  sha1 "24f6a1f926f5eda8bd8c0a343d3b175378d706bf"
   homepage "http://php.net"
-  version "5.6.9"
+  version "7.0.2"
   # revision 1
   
   # So PHP extensions don't report missing symbols
