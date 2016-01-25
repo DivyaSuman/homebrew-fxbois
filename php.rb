@@ -10,14 +10,14 @@ class Php < Formula
   sha1 "24f6a1f926f5eda8bd8c0a343d3b175378d706bf"
   homepage "http://php.net"
   version "7.0.2"
-  revision 1
+  #revision 2
   
   # So PHP extensions don't report missing symbols
   skip_clean 'bin', 'sbin'
   
   depends_on 'curl'
   depends_on 'freetype'
-  depends_on 'homebrew/dupes/zlib'
+  #depends_on 'homebrew/dupes/zlib'
   depends_on 'jpeg'
   depends_on 'libpng'
   depends_on 'libressl'
@@ -83,7 +83,8 @@ class Php < Formula
       "--with-tidy=#{Formula['tidy'].opt_prefix}",
       #"--with-tidy=#{Formula['tidy-html5'].opt_prefix}",
       "--with-xmlrpc",
-      "--with-zlib=#{Formula['zlib'].opt_prefix}",
+      "--with-zlib=/usr",
+      #"--with-zlib=#{Formula['zlib'].opt_prefix}",
       "--without-pear",
     ]
 
