@@ -10,3 +10,10 @@ Installation
 2. Tap dupes ```brew tap homebrew/dupes```
 3. Tap this repository ```brew tap fxbois/fxbois```
 4. Install a formula ```brew install php```
+5. 
+
+Issues
+------
+
+Issues with configue script (e.g. ZLIB)
+```xcode-select --install```
