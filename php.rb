@@ -5,11 +5,11 @@ require 'formula'
 class Php < Formula
   
   # wget "http://php.net/get/php-7.0.X.tar.bz2/from/this/mirror" -O /Library/Caches/Homebrew/php-7.0.X
-  url "http://php.net/get/php-7.0.3.tar.bz2/from/this/mirror"
+  url "http://php.net/get/php-7.0.4.tar.bz2/from/this/mirror"
   # openssl sha1 /Library/Caches/Homebrew/php-7.0.X
-  sha1 "60127213896626ba218eb3425271918080f25054"
+  sha1 "4e6ad0af73e9b8de66844dee2f14cc089cb5aea8"
   homepage "http://php.net"
-  version "7.0.3"
+  version "7.0.4"
   #revision 2
   
   # So PHP extensions don't report missing symbols
