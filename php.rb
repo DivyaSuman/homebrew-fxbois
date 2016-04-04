@@ -6,8 +6,8 @@ class Php < Formula
   
   # wget "http://php.net/get/php-7.0.X.tar.bz2/from/this/mirror" -O /Library/Caches/Homebrew/php-7.0.X
   url "http://php.net/get/php-7.0.5.tar.bz2/from/this/mirror"
-  # openssl sha1 /Library/Caches/Homebrew/php-7.0.X
-  sha1 "e447f1a58b848bdbce7edad9b1607bf2e24edbe8"
+  # shasum -a 256 /Library/Caches/Homebrew/php-7.0.X
+  sha256 "2c09af7fe64537ea795f098b9b542ead407ef83f7cdc65b3787115ccbbb51de9"
   homepage "http://php.net"
   version "7.0.5"
   #revision 2
