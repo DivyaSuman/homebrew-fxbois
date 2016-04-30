@@ -5,12 +5,11 @@ require 'formula'
 class Php < Formula
   
   # wget "http://php.net/get/php-7.0.X.tar.bz2/from/this/mirror" -O /Library/Caches/Homebrew/php-7.0.X
-  url "http://php.net/get/php-7.0.5.tar.bz2/from/this/mirror"
+  url "http://php.net/get/php-7.0.6.tar.bz2/from/this/mirror"
   # shasum -a 256 /Library/Caches/Homebrew/php-7.0.X
-  sha256 "2c09af7fe64537ea795f098b9b542ead407ef83f7cdc65b3787115ccbbb51de9"
+  sha256 "14ddf192a9965c858c1e742a61456be2f34a4db87556172c0d76f08de96329b7"
   homepage "http://php.net"
-  version "7.0.5"
-  #revision 2
+  version "7.0.6"
   
   # So PHP extensions don't report missing symbols
   skip_clean 'bin', 'sbin'
