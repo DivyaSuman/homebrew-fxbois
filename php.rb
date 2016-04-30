@@ -25,7 +25,7 @@ class Php < Formula
   depends_on 'mysql'
   depends_on 'openssl'
   depends_on 'readline'
-  depends_on 'fxbois/fxbois/tidy'
+  #depends_on 'fxbois/fxbois/tidy'
   #depends_on 'tidy-html5'
 
   def install
@@ -80,7 +80,7 @@ class Php < Formula
       "--with-pdo-mysql=#{HOMEBREW_PREFIX}",
       "--with-png-dir=#{Formula['libpng'].opt_prefix}",
       "--with-readline=#{Formula['readline'].opt_prefix}",
-      "--with-tidy=#{Formula['tidy'].opt_prefix}",
+      #"--with-tidy=#{Formula['tidy'].opt_prefix}",
       #"--with-tidy=#{Formula['tidy-html5'].opt_prefix}",
       "--with-xmlrpc",
       "--with-zlib=/usr",
