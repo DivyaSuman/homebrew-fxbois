@@ -14,6 +14,6 @@ Installation
 Issues
 ------
 
-Issues with configue script (e.g. ZLIB)
+Issues with configure script (e.g. ZLIB)
 
 ```xcode-select --install```
