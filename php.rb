@@ -15,7 +15,7 @@ class Php < Formula
   skip_clean 'bin', 'sbin'
   
   depends_on 'curl'
-  depends_on 'freetype'
+  #depends_on 'freetype'
   #depends_on 'homebrew/dupes/zlib'
   depends_on 'jpeg'
   depends_on 'libpng'
@@ -41,13 +41,14 @@ class Php < Formula
       "--enable-calendar",
       #"--enable-exif",
       #"--enable-ftp",
-      "--enable-gd-native-ttf",
+      #"--enable-gd-native-ttf",
       #"--enable-intl=no",
+      "--enable-intl",
       #"--enable-mbregex",
       "--enable-mbstring",
       "--enable-pcntl",
       #"--enable-shmop",
-      "--enable-soap",
+      #"--enable-soap",
       "--enable-sockets",
       #"--enable-sysvmsg",
       #"--enable-sysvsem",
@@ -59,7 +60,7 @@ class Php < Formula
       "--with-config-file-path=/etc",
       #"--with-config-file-scan-dir=#{config_path}/conf.d",
       "--with-curl",
-      "--with-freetype-dir=#{Formula['freetype'].opt_prefix}",
+      #"--with-freetype-dir=#{Formula['freetype'].opt_prefix}",
       "--with-gd",
       #"--with-gettext=#{Formula['gettext'].opt_prefix}",
       #"--with-iconv-dir=/usr",
