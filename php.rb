@@ -17,6 +17,7 @@ class Php < Formula
   depends_on 'curl'
   #depends_on 'freetype'
   #depends_on 'homebrew/dupes/zlib'
+  depends_on 'icu4c'
   depends_on 'jpeg'
   depends_on 'libpng'
   #depends_on 'libressl'
@@ -64,7 +65,7 @@ class Php < Formula
       "--with-gd",
       #"--with-gettext=#{Formula['gettext'].opt_prefix}",
       #"--with-iconv-dir=/usr",
-      #"--with-icu-dir=#{Formula['icu4c'].opt_prefix}",
+      "--with-icu-dir=#{Formula['icu4c'].opt_prefix}",
       "--with-jpeg-dir=#{Formula['jpeg'].opt_prefix}",
       #"--with-kerberos=/usr",
       "--with-libedit",
