@@ -83,7 +83,7 @@ class Php < Formula
       "--with-xmlrpc",
       "--with-zlib=/usr",
       #"--with-zlib=#{Formula['zlib'].opt_prefix}",
-      "--without-pear",
+      #"--without-pear",
     ]
 
     system "./configure", *args
