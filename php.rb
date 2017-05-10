@@ -3,21 +3,24 @@
 require 'formula'
 
 class Php < Formula
-  
+
+  # test
   # wget "http://php.net/get/php-7.1.X.tar.bz2/from/this/mirror" -O ~/Library/Caches/Homebrew/php-7.1.X
   url "http://php.net/get/php-7.1.4.tar.bz2/from/this/mirror"
   # shasum -a 256 ~/Library/Caches/Homebrew/php-7.1.X
   sha256 "39bf697836e2760b3a44ea322e9e5f1f5b1f07abeb0111f6495eff7538e25805"
   homepage "http://php.net"
   version "7.1.4"
-  
+
   # So PHP extensions don't report missing symbols
   skip_clean 'bin', 'sbin'
-  
+
+
   depends_on 'curl'
   #depends_on 'freetype'
   #depends_on 'homebrew/dupes/zlib'
   depends_on 'icu4c'
+  depends_on 'httpd24'
   depends_on 'jpeg'
   depends_on 'libpng'
   #depends_on 'libressl'
@@ -56,7 +59,7 @@ class Php < Formula
       #"--enable-sysvshm",
       #"--enable-wddx",
       "--enable-zip",
-      "--with-apxs2=/usr/sbin/apxs",
+      #"--with-apxs2=/usr/sbin/apxs",
       "--with-bz2=/usr",
       "--with-config-file-path=/etc",
       #"--with-config-file-scan-dir=#{config_path}/conf.d",
@@ -87,15 +90,15 @@ class Php < Formula
     ]
 
     system "./configure", *args
-    
-    inreplace "Makefile",
-              /^INSTALL_IT = \$\(mkinstalldirs\) '([^']+)' (.+) LIBEXECDIR=([^\s]+) (.+)$/,
-              "INSTALL_IT = $(mkinstalldirs) '#{libexec}/apache2' \\2 LIBEXECDIR='#{libexec}/apache2' \\4"
-    
+
+    #inreplace "Makefile",
+    #          /^INSTALL_IT = \$\(mkinstalldirs\) '([^']+)' (.+) LIBEXECDIR=([^\s]+) (.+)$/,
+    #          "INSTALL_IT = $(mkinstalldirs) '#{libexec}/apache2' \\2 LIBEXECDIR='#{libexec}/apache2' \\4"
+
     inreplace 'Makefile' do |s|
       s.change_make_var! "EXTRA_LIBS", "\\1 -lstdc++"
     end
-    
+
     system "make"
     ENV.deparallelize # parallel install fails on some systems
     system "make install"
