@@ -17,7 +17,7 @@ Sierra (new way)
 2. ```sudo apachectl stop```
 3. ```brew tap homebrew/apache```
 4. ```brew install httpd24 --with-privileged-ports --with-http2```
-5. change ```/usr/local/etc/apache2/2.4/httpd.conf```
+5. change ```/usr/local/etc/apache2/2.4/httpd.conf``` (comment proxy_html_module, ssl_module, Include + add ```Include /usr/local/etc/apache2/2.4/extra/httpd.conf```)
 
 Sierra (old way)
 ----------------
