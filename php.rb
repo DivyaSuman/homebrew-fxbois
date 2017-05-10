@@ -59,7 +59,7 @@ class Php < Formula
       #"--enable-sysvshm",
       #"--enable-wddx",
       "--enable-zip",
-      #"--with-apxs2=/usr/sbin/apxs",
+      "--with-apxs2=/usr/local/bin/apxs",
       "--with-bz2=/usr",
       "--with-config-file-path=/etc",
       #"--with-config-file-scan-dir=#{config_path}/conf.d",
