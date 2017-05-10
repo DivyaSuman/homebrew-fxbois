@@ -93,7 +93,7 @@ class Php < Formula
 
     inreplace "Makefile",
               /^INSTALL_IT = \$\(mkinstalldirs\) '([^']+)' (.+) LIBEXECDIR=([^\s]+) (.+)$/,
-              "INSTALL_IT = $(mkinstalldirs) '#{libexec}/apache2' \\2LIBEXECDIR='#{libexec}/apache2' \\4"
+              "INSTALL_IT = $(mkinstalldirs) '#{libexec}/apache2' \\2 LIBEXECDIR='#{libexec}/apache2' \\4"
     end
 
     #inreplace "Makefile",
