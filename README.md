@@ -11,8 +11,16 @@ Installation
 3. Tap this repository ```brew tap fxbois/fxbois```
 4. Install a formula ```brew install php```
 
-Sierra
-------
+Sierra (new way)
+----------------
+1. ```brew install apr apr-util```
+2. ```sudo apachectl stop```
+3. ```brew tap homebrew/apache```
+4. ```brew install httpd24 --with-privileged-ports --with-http2```
+5. change ```/usr/local/etc/apache2/2.4/httpd.conf```
+
+Sierra (old way)
+----------------
 
 1. brew install apr apr-util
 2. brew link apr-util --force
