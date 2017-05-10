@@ -20,7 +20,7 @@ class Php < Formula
   #depends_on 'freetype'
   #depends_on 'homebrew/dupes/zlib'
   depends_on 'icu4c'
-  depends_on 'httpd24'
+  depends_on 'httpd24' => %w{with-privileged-ports with-http2}
   depends_on 'jpeg'
   depends_on 'libpng'
   #depends_on 'libressl'
