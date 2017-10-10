@@ -18,6 +18,7 @@ Sierra (new way)
 3. ```brew tap homebrew/apache```
 4. ```brew install httpd24 --with-privileged-ports --with-http2```
 5. change ```/usr/local/etc/apache2/2.4/httpd.conf``` (comment proxy_html_module, ssl_module, Include + add ```Include /usr/local/etc/apache2/2.4/extra/httpd.conf```)
+6. mettre à jour la version de php : ```/usr/local/etc/apache2/2.4/httpd.conf```
 
 Sierra (old way)
 ----------------
