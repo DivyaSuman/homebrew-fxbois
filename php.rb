@@ -6,11 +6,11 @@ class Php < Formula
 
   # test
   # wget "http://php.net/get/php-7.1.X.tar.bz2/from/this/mirror" -O ~/Library/Caches/Homebrew/php-7.1.X
-  url "http://php.net/get/php-7.1.5.tar.bz2/from/this/mirror"
+  url "http://php.net/get/php-7.1.10.tar.bz2/from/this/mirror"
   # shasum -a 256 ~/Library/Caches/Homebrew/php-7.1.X
-  sha256 "28eaa4784f1bd8b7dc71206dc8c4375510199432dc17af6906b14d16b3058697"
+  sha256 "0ee51b9b1ae7eca3e9558f772ce20cbacd1f76420009b3af630c87027f9a41af"
   homepage "http://php.net"
-  version "7.1.5"
+  version "7.1.10"
 
   # So PHP extensions don't report missing symbols
   skip_clean 'bin', 'sbin'
