@@ -15,7 +15,6 @@ class Php < Formula
   # So PHP extensions don't report missing symbols
   skip_clean 'bin', 'sbin'
 
-
   depends_on 'curl'
   #depends_on 'freetype'
   #depends_on 'homebrew/dupes/zlib'
@@ -41,6 +40,7 @@ class Php < Formula
       "--localstatedir=#{var}",
       #"--sysconfdir=#{config_path}",
       "--libexecdir=#{libexec}",
+      #"--libexecdir=#{Formula['httpd'].opt_prefix}/lib/httpd/modules",
       "--mandir=#{man}",
       "--disable-cgi",
       "--disable-debug",
@@ -79,7 +79,7 @@ class Php < Formula
       "--with-libxml-dir=#{Formula['libxml2'].opt_prefix}",
       #"--with-mhash",
       "--with-mysql-sock=/tmp/mysql.sock",
-      "--with-mysql=mysqlnd",
+      #"--with-mysql=mysqlnd",
       "--with-mysqli=mysqlnd",
       #"--with-mysql=#{HOMEBREW_PREFIX}",
       #"--with-mysqli=#{HOMEBREW_PREFIX}/bin/mysql_config",
