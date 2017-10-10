@@ -11,6 +11,11 @@ Installation
 3. Tap this repository ```brew tap fxbois/fxbois```
 4. Install a formula ```brew install php```
 
+Sierra (new new way)
+----------------
+1. ```sudo apachectl stop```
+2. ```brew install php```
+
 Sierra (new way)
 ----------------
 1. ```brew install apr apr-util```
