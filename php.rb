@@ -30,7 +30,11 @@ class Php < Formula
   depends_on 'openssl'
   depends_on 'readline'
 
+  needs :cxx11
+
   def install
+
+    ENV.cxx11
 
     args = [
       "--prefix=#{prefix}",
@@ -75,12 +79,13 @@ class Php < Formula
       "--with-libxml-dir=#{Formula['libxml2'].opt_prefix}",
       #"--with-mhash",
       "--with-mysql-sock=/tmp/mysql.sock",
-      #"--with-mysql=mysqlnd",
-      #"--with-mysqli=mysqlnd",
-      "--with-mysql=#{HOMEBREW_PREFIX}",
-      "--with-mysqli=#{HOMEBREW_PREFIX}/bin/mysql_config",
+      "--with-mysql=mysqlnd",
+      "--with-mysqli=mysqlnd",
+      #"--with-mysql=#{HOMEBREW_PREFIX}",
+      #"--with-mysqli=#{HOMEBREW_PREFIX}/bin/mysql_config",
       "--with-openssl=" + Formula['openssl'].opt_prefix.to_s,
-      "--with-pdo-mysql=#{HOMEBREW_PREFIX}",
+      "--with-pdo-mysql=mysqlnd",
+      #"--with-pdo-mysql=#{HOMEBREW_PREFIX}",
       "--with-png-dir=#{Formula['libpng'].opt_prefix}",
       "--with-readline=#{Formula['readline'].opt_prefix}",
       "--with-xmlrpc",
