@@ -6,11 +6,11 @@ class Php < Formula
 
   # test
   # wget "http://php.net/get/php-7.2.X.tar.bz2/from/this/mirror" -O ~/Library/Caches/Homebrew/php-7.2.X
-  url "http://php.net/get/php-7.2.0.tar.bz2/from/this/mirror"
+  url "http://php.net/get/php-7.2.3.tar.bz2/from/this/mirror"
   # shasum -a 256 ~/Library/Caches/Homebrew/php-7.2.X
-  sha256 "2bfefae4226b9b97879c9d33078e50bdb5c17f45ff6e255951062a529720c64a"
+  sha256 "4a735aac0ba764dd8208ea29007d3916396c5292e003ba8d3bec49edcdd5bf92"
   homepage "http://php.net"
-  version "7.2.0"
+  version "7.2.3"
 
   # So PHP extensions don't report missing symbols
   skip_clean 'bin', 'sbin'
@@ -99,10 +99,6 @@ class Php < Formula
     inreplace "Makefile",
               /^INSTALL_IT = \$\(mkinstalldirs\) '([^']+)' (.+) LIBEXECDIR=([^\s]+) (.+)$/,
               "INSTALL_IT = $(mkinstalldirs) '#{libexec}/apache2' \\2 LIBEXECDIR='#{libexec}/apache2' \\4"
-
-    #inreplace "Makefile",
-    #          /^INSTALL_IT = \$\(mkinstalldirs\) '([^']+)' (.+) LIBEXECDIR=([^\s]+) (.+)$/,
-    #          "INSTALL_IT = $(mkinstalldirs) '#{libexec}/apache2' \\2 LIBEXECDIR='#{libexec}/apache2' \\4"
 
     inreplace 'Makefile' do |s|
       s.change_make_var! "EXTRA_LIBS", "\\1 -lstdc++"
